@@ -1,0 +1,9 @@
+<h1>TODO List</h1>
+<input placeholder="Filter your to-dos!">
+<ol>
+    <li *ngFor="let todo of todos;" [ngClass]="{strikethrough: todo.completed}">
+<button *ngIf="!todo.completed">Complete!</button>{{todo.task}} <button>X</button>
+    </li>
+</ol>
+<input placeholder="Add your todo">
+<button>Add</button>
